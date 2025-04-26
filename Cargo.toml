@@ -8,5 +8,15 @@ license = "UNLICENSED"
 repository = "https://github.com/nayud/server"
 rust-version = "1.86.0"
 
+[profile.dev]
+incremental = true
+
+[profile.release]
+codegen-units = 1
+lto = true
+opt-level = 3
+panic = "abort"
+strip = true
+
 [dependencies]
 ntex = { version = "2.12.4", features = ["tokio"] }
