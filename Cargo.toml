@@ -1,0 +1,12 @@
+[package]
+name = "nayud"
+version = "1.0.0"
+authors = ["Dimas Yudha Pratama <pratama@dimasyudha.com>"]
+description = ""
+edition = "2024"
+license = "UNLICENSED"
+repository = "https://github.com/nayud/server"
+rust-version = "1.86.0"
+
+[dependencies]
+ntex = { version = "2.12.4", features = ["tokio"] }
