@@ -1,0 +1,23 @@
+[package]
+name = "nayud-pos"
+version = "1.0.0"
+edition = "2024"
+rust-version = "1.86.0"
+
+[[bin]]
+name = "nayud-pos"
+path = "./src/bin/main.rs"
+
+[profile.dev]
+incremental = true
+
+[profile.release]
+codegen-units = 1
+lto = true
+opt-level = 3
+panic = "abort"
+strip = true
+
+[dependencies]
+ntex = { version = "2.12.4", features = ["tokio"] }
+scylla = "1.1.0"
